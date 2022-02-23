@@ -1,3 +1,6 @@
+/* Utilities********
+********************* */
+
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +9,9 @@
 
 :root{
     --blacktxt-color: rgb(35, 39, 42);
+    --whitetext-color: rgb(255, 255, 255);
+    --bgwave-color: rgb(246,246,246);
+    --btnblue-color: rgb(142,161,225);
 }
 
 body{
@@ -16,11 +22,22 @@ img{
     max-width: 100%;
 }
 
+.size{
+    position: relative;
+    height: 100vh;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .clearfix::after{
     content: "";
     display:table;
     clear: both;
 }
+
+/* ********************* */
+
+/* BARRA DI NAVIGAZIONE */
 
 .navigation>img{
     float: left;
@@ -34,6 +51,8 @@ img{
     float: right;
 }
 
+
+/* INSERIMENTO BANNER JUMBO */
 .jumbo{
     height: 100vh;
     background-image: url(../img/jumbo.png);
@@ -41,27 +60,22 @@ img{
     background-repeat: no-repeat;
 }
 
-a:not(.button_black,.button_white) {
+
+/* Settaggi anchorTAG */
+a:not(.button_black,.button_white,.button_blue) {
     padding: 1rem;
     text-decoration: none;
     text-align: center;
-    color: white;
+    color: var(--whitetext-color);
 }
 
-a:not(.button_black,.button_white):hover{
+a:not(.button_black,.button_white, .button_blue):hover{
     text-decoration: underline;
 }
 
-
-.size{
-    position: relative;
-    height: 100vh;
-    width: 1200px;
-    margin: 0 auto;
-}
-
+/* Colori per i button */
 .button_black{
-    color: white;
+    color: var(--whitetext-color);
     background-color: var(--blacktxt-color);
     border-radius: 28px;
     font-size: 16px;
@@ -74,24 +88,46 @@ a:not(.button_black,.button_white):hover{
 .button_white {
     text-decoration: none;
     color: var(--blacktxt-color);
-    background-color: white;
+    background-color: var(--whitetext-color);
     border-radius: 28px;
     font-size: 16px;
     padding: 15px 32px;
     font-weight: bold;
 }
 
+.button_blue{
+    color: var(--whitetext-color);
+    background-color: var(--btnblue-color);
+    border-radius: 28px;
+    font-size: 16px;
+    padding: 15px 32px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 8;
+}
+
+
+/* Ombratura al passaggio del mouse sui btn */
 .btn:hover{
     box-shadow: 0 8px 15px rgb(0 0 0 / 40%);
 }
 
+/* Impostazione del primo testo centrale al JUMBO */
 
+.center_txt{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    text-align: center;
+    line-height: 20px;
+}
 
+/* Abbellimento Testo e didascalia */
 
 .hero_text{
     width: 50%;
     margin: 0 auto;
-    color: white;
+    color: var(--whitetext-color);
     
 }
 
@@ -111,31 +147,30 @@ a:not(.button_black,.button_white):hover{
 
 .hero_text>h1{
     font-size: 40px; 
-    padding: 10px;
-    margin: 1rem;  
+    margin: 1rem; 
+    font-weight: bold; 
+    font-weight: 800;
+    line-height: 120%;
 }
 
+/* ************************** */
 
-.center_txt{
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    text-align: center;
-    line-height: 20px;
-}
 
-/* Seconda viewport */
+/* Seconda viewport 
+********************/
 
 .col_sx{
     float: left;
     width: 70%;
+    margin-top: 50px;
 }
 
 .col_dx{
     float: right;
     width: 30%;
     vertical-align: baseline;
-    margin-top: 30px;
+    margin-top: 100px;
+    
 }
 
 h2{
@@ -150,3 +185,50 @@ h2{
     line-height: 1.625;
 }
     
+
+/* Terza viewport 
+*******************/
+
+/* Colore di sfondo grigio */
+.bg_wave{
+    height: 100vh;
+    background-color: var(--bgwave-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.col_sx_invert{
+    float: left;
+    width: 30%;
+    vertical-align: baseline;
+    margin-top: 100px;
+}
+
+.col_dx_invert{
+    float: right;
+    width: 70%;
+    margin-top: 50px;
+    
+}
+
+.row{
+    text-align: center;
+} 
+
+
+.final_txt{
+    position: relative;
+}
+
+.final_txt>h3{
+    position: absolute;
+    left: 30%;
+    top: 80%;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 80%;
+} 
+
+
+
+
