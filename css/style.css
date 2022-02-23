@@ -58,19 +58,27 @@ img{
     background-image: url(../img/jumbo.png);
     background-size: contain;
     background-repeat: no-repeat;
+    
 }
 
 
 /* Settaggi anchorTAG */
 a:not(.button_black,.button_white,.button_blue) {
-    padding: 1rem;
     text-decoration: none;
     text-align: center;
     color: var(--whitetext-color);
+    vertical-align: middle;
+    position: relative;
+    left: 15%;
+    padding: 15px;
 }
 
 a:not(.button_black,.button_white, .button_blue):hover{
     text-decoration: underline;
+}
+
+.navigation>a{
+    text-align: center;
 }
 
 /* Colori per i button */
@@ -90,8 +98,8 @@ a:not(.button_black,.button_white, .button_blue):hover{
     color: var(--blacktxt-color);
     background-color: var(--whitetext-color);
     border-radius: 28px;
-    font-size: 16px;
-    padding: 15px 32px;
+    font-size: 14px;
+    padding: 11px 20px;
     font-weight: bold;
 }
 
@@ -230,5 +238,11 @@ h2{
 } 
 
 
+/* FOOTER********
+*******************/
 
-
+.site_footer{
+    margin-top: 10rem;
+    height: 100vh;
+    background-color: var(--blacktxt-color);
+}
